@@ -33,14 +33,35 @@ p{margin:.5em 0 1em}
 .pill:hover{box-shadow:0 3px 0 #d7a6be}
 .studio-card{display:grid;justify-items:center;text-align:center;background:#fff4f8;border:1px dashed var(--line);border-radius:18px;padding:8px 12px 16px}
 .studio-card img{display:block;width:100%;height:auto}
-.note{padding:.65rem .85rem;background:#fff8e8;border:1px dashed #d8ae87;border-radius:10px;margin:14px 0 0}
-.album,.drawers{display:grid;gap:12px;margin-top:20px}.album{grid-template-columns:repeat(3,1fr)}
+.icon{display:block;width:24px;height:24px;flex:none}
+.rooms .icon{width:38px;height:38px;padding:3px;filter:drop-shadow(0 2px 0 #e7b1c64d);transition:transform .2s ease}
+.rooms a:hover .icon,.pill:hover .icon{transform:translateY(-2px) rotate(-5deg)}
+.pill{gap:.4rem}.pill .icon{width:21px;height:21px;transition:transform .2s ease}
+.desk-scene{position:relative;width:100%}
+.desk-hotspot{position:absolute;left:30%;top:26%;width:36%;height:34%;background:none;border:0;border-radius:12%;padding:0}
+.desk-hotspot:hover{box-shadow:inset 0 0 22px #ed9cbb66}
+.desk-twinkle{position:absolute;top:11%;right:13%;pointer-events:none;animation:float-star 2.8s ease-in-out infinite}
+.desk-twinkle .icon{width:34px;height:34px}
+@keyframes float-star{50%{transform:translateY(-6px) rotate(9deg)}}
+.desk-note{position:absolute;z-index:1;top:50%;left:50%;width:min(94%,340px);max-height:100%;overflow:auto;overscroll-behavior:contain;transform:translate(-50%,-50%);border:1px solid #ba7b9a;border-radius:15px;background:#fffafd;box-shadow:0 8px 30px #502c4144;text-align:left;animation:note-in .25s ease-out}
+@keyframes note-in{from{opacity:0;transform:translate(-50%,-44%) scale(.94)}}
+.note-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 9px 0 12px;background:linear-gradient(100deg,#f7cfe1,#ece2fb,#e1edfb);font-size:.73rem;font-weight:800;letter-spacing:.03em;color:#503447}
+.note-bar span{display:flex;align-items:center;gap:6px}.note-bar .icon{width:18px;height:18px}
+.note-close{border:0;border-radius:50%;background:transparent;min-width:44px;min-height:44px;font-size:1.35rem}.note-close:hover{background:#fff7fb}
+.note-paper{position:relative;padding:10px 12px 14px;background:repeating-linear-gradient(#fffafd 0 23px,#f7e6ef 24px,#fffafd 25px)}
+.note-paper h2{font-size:clamp(1rem,3vw,1.4rem);letter-spacing:0}.note-paper p{font-size:.83rem;line-height:1.4;margin:.4em 0 .65em;min-height:2.8em}
+.note-paper .pill{font-size:.75rem;padding:.3rem .55rem}.note-heart[aria-pressed=true]{background:#f5bdd5;border-color:#ac6b8c}
+.heart-float{position:absolute;right:15%;bottom:18px;color:#a34172;font-size:1.4rem;pointer-events:none;animation:lift-heart .65s ease-out both}
+@keyframes lift-heart{to{transform:translateY(-55px) rotate(15deg);opacity:0}}
+.album,.drawers{display:grid;align-items:start;gap:12px;margin-top:20px}.album{grid-template-columns:repeat(3,1fr)}
 details{border:1px solid var(--line);border-radius:14px;background:#fff4f9;overflow:hidden}
 details:nth-child(even){background:#f6effb}
 summary{cursor:pointer;display:flex;align-items:center;gap:.6rem;list-style:none;padding:.75rem 1rem;min-height:48px;font-weight:750}
 summary::-webkit-details-marker{display:none}
 summary:after{content:"+";margin-left:auto;color:var(--berry);font-size:1.15rem}
 details[open] summary:after{content:"−"}
+details[open] summary{background:#ffffff60}
+details[open]>p,details[open]>.tags{animation:unfold .2s ease-out}
 details p,.tags{padding:0 1rem;margin:.25rem 0 1rem}
 summary small{color:var(--soft);font-weight:600;flex-shrink:0}
 .tags{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem}
@@ -59,4 +80,4 @@ summary small{color:var(--soft);font-weight:600;flex-shrink:0}
 footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;background:#fae4ef;border-top:1px dashed var(--line);padding:.75rem clamp(14px,4vw,30px);font-size:.76rem;color:var(--soft)}
 #visitCount{font-variant-numeric:tabular-nums;letter-spacing:.12em;border-radius:4px;background:#fff8fc;padding:.15em .35em}
 @media(max-width:660px){.home,.album{grid-template-columns:1fr}.studio-card{width:min(100%,390px);justify-self:center}.rooms{grid-template-columns:repeat(3,minmax(0,1fr))}.project{grid-template-columns:1fr}.stamp{width:min(100%,125px)}}
-@media(prefers-reduced-motion:reduce){.room.enter{animation:none}}
+@media(prefers-reduced-motion:reduce){.room.enter,.desk-twinkle,.desk-note,details[open]>p,details[open]>.tags,.heart-float{animation:none}.heart-float{display:none}.rooms .icon,.pill .icon{transition:none}}

@@ -54,12 +54,52 @@ shelf.addEventListener('keydown', event => {
   showProject(selectors[next]);
 });
 
-document.querySelector('[data-note]').addEventListener('click', event => {
+const note = document.getElementById('home-note');
+const noteTriggers = [...document.querySelectorAll('.note-trigger')];
+let noteOpener;
+function setNote(open, restoreFocus = true) {
+  note.hidden = !open;
+  noteTriggers.forEach(button => button.setAttribute('aria-expanded', String(open)));
+  if (open) document.getElementById('note-title').focus({preventScroll: true});
+  else if (restoreFocus) noteOpener?.focus();
+}
+noteTriggers.forEach(button => button.addEventListener('click', () => {
+  if (note.hidden) {
+    noteOpener = button;
+    setNote(true);
+  } else setNote(false);
+}));
+note.querySelector('.note-close').addEventListener('click', () => setNote(false));
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && !note.hidden && activeRoom?.id === 'top') setNote(false);
+});
+window.addEventListener('hashchange', () => {
+  if (activeRoom?.id !== 'top') setNote(false, false);
+});
+const messages = [
+  'I’m glad you stopped by. Make yourself at home! ♡',
+  'A tiny reminder: little ideas are worth making.',
+  'The Creations shelf is open whenever you feel curious.',
+  'Here’s a little good luck for whatever you’re working on today. ♡',
+];
+let noteIndex = 0;
+note.querySelector('.note-next').addEventListener('click', () => {
+  noteIndex = (noteIndex + 1) % messages.length;
+  document.getElementById('note-message').textContent = messages[noteIndex];
+});
+note.querySelector('.note-heart').addEventListener('click', event => {
   const button = event.currentTarget;
-  const note = document.getElementById(button.dataset.note);
-  note.hidden = !note.hidden;
-  button.setAttribute('aria-expanded', String(!note.hidden));
-  button.textContent = note.hidden ? '♡ Open a little note' : '♡ Fold the note';
+  const liked = button.getAttribute('aria-pressed') !== 'true';
+  button.setAttribute('aria-pressed', String(liked));
+  button.setAttribute('aria-label', liked ? 'Take back heart' : 'Leave a heart');
+  if (liked && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const heart = document.createElement('span');
+    heart.className = 'heart-float';
+    heart.textContent = '♡';
+    heart.setAttribute('aria-hidden', 'true');
+    button.parentElement.append(heart);
+    setTimeout(() => heart.remove(), 700);
+  }
 });
 
 document.getElementById('copyDiscord').addEventListener('click', async () => {
