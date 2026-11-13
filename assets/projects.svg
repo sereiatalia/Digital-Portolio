@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="camera" viewBox="0 0 240 180">
+    <rect width="240" height="180" rx="23" fill="#f9d9e9"/>
+    <path d="M26 0v180M54 0v180M82 0v180M110 0v180M138 0v180M166 0v180M194 0v180M222 0v180M0 26h240M0 54h240M0 82h240M0 110h240M0 138h240M0 166h240" stroke="#fff" opacity=".45"/>
+    <path d="m50 65 12-16h36l12 16h59c7 0 12 5 12 12v59c0 7-5 12-12 12H55c-7 0-12-5-12-12V77c0-7 5-12 12-12Z" fill="#fff8fc" stroke="#a05276" stroke-width="3"/>
+    <circle cx="111" cy="106" r="27" fill="#e9dcfa" stroke="#a05276" stroke-width="3"/>
+    <circle cx="111" cy="106" r="18" fill="#b0ccef"/>
+    <circle cx="164" cy="81" r="5" fill="#e9a6c5"/>
+    <path d="M191 27c-5-10-17-4-10 5l10 9 10-9c7-9-5-15-10-5Z" fill="#f39abf" stroke="#a05276" stroke-width="2"/>
+    <path d="m34 31 3 8 8 3-8 3-3 8-3-8-8-3 8-3ZM202 118l3 8 8 3-8 3-3 8-3-8-8-3 8-3Z" fill="#fff1b9"/>
+    <path d="M52 140c14-4 19-9 23-19" fill="none" stroke="#e8a7ca" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="story" viewBox="0 0 240 180">
+    <rect width="240" height="180" rx="23" fill="#e9e0f7"/>
+    <ellipse cx="120" cy="153" rx="84" ry="11" fill="#cab9e4"/>
+    <path d="M47 37c30-6 50-2 73 9 23-11 43-15 73-9v110c-30-6-50-2-73 9-23-11-43-15-73-9Z" fill="#fff9fc" stroke="#745487" stroke-width="3"/>
+    <path d="M120 46v110M61 66c15-3 30-2 43 3M61 82c15-3 30-2 43 3M61 98c15-3 30-2 43 3M137 72c14-5 28-7 43-6M137 88c14-5 28-7 43-6" fill="none" stroke="#c5a6d6" stroke-width="3" stroke-linecap="round"/>
+    <path d="M160 103a19 19 0 1 0 20 29 21 21 0 0 1-20-29Z" fill="#e8badb" stroke="#745487" stroke-width="2"/>
+    <path d="m31 26 2 6 6 2-6 2-2 6-2-6-6-2 6-2ZM201 54l2 6 6 2-6 2-2 6-2-6-6-2 6-2Z" fill="#ffedb3"/>
+  </symbol>
+  <symbol id="game" viewBox="0 0 240 180">
+    <rect width="240" height="180" rx="23" fill="#e2f2e9"/>
+    <ellipse cx="120" cy="152" rx="85" ry="13" fill="#bfdecf"/>
+    <path d="M62 57h116c18 0 28 17 33 52 4 31-8 42-28 28l-24-16H81l-24 16c-20 14-32 3-28-28 5-35 15-52 33-52Z" fill="#fffaf5" stroke="#6e8f75" stroke-width="3"/>
+    <path d="M72 73v35M55 90h34" stroke="#7a9b80" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="158" cy="82" r="8" fill="#f6bad0" stroke="#a36380" stroke-width="2"/>
+    <circle cx="178" cy="99" r="8" fill="#d6c6f4" stroke="#8d77ae" stroke-width="2"/>
+    <circle cx="159" cy="103" r="3" fill="#fff0b2"/>
+    <path d="M25 38c4-11 10-12 16-2M195 39c8-9 16-7 20 3" stroke="#a6c9ad" stroke-width="3" stroke-linecap="round"/>
+    <path d="M43 31c-10-4-12-16-6-22 10 1 14 8 12 19Z" fill="#a7d3b6"/>
+  </symbol>
+  <symbol id="bot" viewBox="0 0 240 180">
+    <rect width="240" height="180" rx="23" fill="#dfeafa"/>
+    <path d="M71 45h98a25 25 0 0 1 25 25v57a25 25 0 0 1-25 25H71a25 25 0 0 1-25-25V70a25 25 0 0 1 25-25Z" fill="#fffafd" stroke="#6883ae" stroke-width="3"/>
+    <path d="M103 45V33m-8 0h16" stroke="#6883ae" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="103" cy="33" r="6" fill="#f6bed8"/>
+    <path d="M85 93c9-10 19-10 28 0M127 93c9-10 19-10 28 0" fill="none" stroke="#775b91" stroke-width="5" stroke-linecap="round"/>
+    <path d="M102 117c11 12 25 12 36 0" fill="none" stroke="#e7a0c5" stroke-width="4" stroke-linecap="round"/>
+    <path d="M46 78 31 69v33l15-7M194 78l15-9v33l-15-7" fill="#f7d4e5" stroke="#6883ae" stroke-width="3"/>
+    <path d="M23 41c-4-8-14-3-8 4l8 7 8-7c6-7-4-12-8-4ZM205 34c-4-8-14-3-8 4l8 7 8-7c6-7-4-12-8-4Z" fill="#f2a6c8"/>
+  </symbol>
+  <symbol id="design" viewBox="0 0 240 180">
+    <rect width="240" height="180" rx="23" fill="#fbe9dd"/>
+    <path d="M45 25h119v112H45Z" fill="#fff9fc" stroke="#a97b86" stroke-width="3"/>
+    <path d="M63 43h87v74H63Z" fill="#e8ddf7"/>
+    <path d="M63 94 85 72l16 15 19-28 30 37v21H63Z" fill="#f7c6d9"/>
+    <circle cx="85" cy="60" r="9" fill="#fff2be"/>
+    <path d="M168 65h37v87h-37z" fill="#fff3e9" stroke="#a97b86" stroke-width="3"/>
+    <path d="m181 128 11-70 8 2-11 70-9 12Z" fill="#d9beee" stroke="#8e759a" stroke-width="2"/>
+    <path d="m200 60 3-16" stroke="#8e759a" stroke-width="2"/>
+    <path d="M43 148c17-5 32-5 48 0M108 148c15-5 31-5 45 0" stroke="#d6a99b" stroke-width="3" stroke-linecap="round"/>
+    <path d="m206 25 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z" fill="#e5aece"/>
+  </symbol>
+</svg>

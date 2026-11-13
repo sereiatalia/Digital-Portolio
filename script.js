@@ -54,6 +54,60 @@ shelf.addEventListener('keydown', event => {
   showProject(selectors[next]);
 });
 
+const paletteToggle = document.getElementById('paletteToggle');
+let palette = 'pink';
+try { palette = localStorage.getItem('alysa-palette') === 'lavender' ? 'lavender' : 'pink'; } catch {}
+function setPalette(value) {
+  palette = value;
+  document.body.dataset.palette = value;
+  paletteToggle.setAttribute('aria-label', value === 'pink' ? 'Switch to lavender theme' : 'Switch to pink theme');
+  paletteToggle.title = paletteToggle.getAttribute('aria-label');
+  paletteToggle.textContent = value === 'pink' ? '✿' : '✧';
+}
+setPalette(palette);
+paletteToggle.addEventListener('click', () => {
+  setPalette(palette === 'pink' ? 'lavender' : 'pink');
+  try { localStorage.setItem('alysa-palette', palette); } catch {}
+});
+
+const pinboard = document.getElementById('skillPins');
+document.querySelectorAll('#skills .tags li').forEach(tag => {
+  const label = tag.textContent;
+  tag.textContent = '';
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.textContent = label;
+  button.setAttribute('aria-pressed', 'false');
+  tag.append(button);
+  button.addEventListener('click', () => {
+    const pinned = button.getAttribute('aria-pressed') === 'true';
+    button.setAttribute('aria-pressed', String(!pinned));
+    if (pinned) {
+      pinboard.querySelectorAll('button').forEach(pin => { if (pin.dataset.label === label) pin.remove(); });
+    } else {
+      const placeholder = pinboard.querySelector('span');
+      if (placeholder) placeholder.remove();
+      const pin = document.createElement('button');
+      pin.type = 'button';
+      pin.dataset.label = label;
+      pin.textContent = '✿ ' + label + ' ×';
+      pin.title = 'Remove ' + label;
+      pin.addEventListener('click', () => button.click());
+      pinboard.append(pin);
+    }
+    if (!pinboard.children.length) {
+      const prompt = document.createElement('span');
+      prompt.textContent = 'Tap a skill above to pin it here ♡';
+      pinboard.append(prompt);
+    }
+  });
+});
+const apps = [...document.querySelectorAll('.app-grid button')];
+apps.forEach(app => app.addEventListener('click', () => {
+  apps.forEach(item => item.setAttribute('aria-pressed', String(item === app)));
+  document.getElementById('appDescription').textContent = app.textContent + ' — ' + app.dataset.app;
+}));
+
 const note = document.getElementById('home-note');
 const noteTriggers = [...document.querySelectorAll('.note-trigger')];
 let noteOpener;

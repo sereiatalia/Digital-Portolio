@@ -7,14 +7,14 @@
   <meta name="description" content="Alysa Guevarra’s scrapbook of games, web projects, and graphic design.">
   <title>www.sereiatalia.com</title>
   <link rel="icon" href="assets/studio.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=4">
-  <script defer src="script.js?v=5"></script>
+  <link rel="stylesheet" href="style.css?v=6">
+  <script defer src="script.js?v=6"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="window">
   <header>
-    <div class="window-bar"><span aria-hidden="true">● ● ●</span><span>www.sereiatalia.com</span><span aria-hidden="true">♡</span></div>
+    <div class="window-bar"><span aria-hidden="true">● ● ●</span><span>www.sereiatalia.com</span><button id="paletteToggle" class="palette-toggle" type="button" aria-label="Switch to lavender theme" title="Switch pastel color">✿</button></div>
     <nav class="rooms" aria-label="Studio rooms">
       <a href="#top"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#house"></use></svg>Home</a>
       <a href="#about"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#bunny"></use></svg>About</a>
@@ -30,6 +30,7 @@
         <p class="label">DEVELOPER · DESIGNER · CREATIVE LEAD</p>
         <h1 id="welcome">Hi, I’m <em>Alysa!</em></h1>
         <p class="intro">I make playful websites, 2d/3d games, and graphic designs. Welcome to my little corner ݁ ˖Ი𐑼⋆</p>
+        <img class="sparkle-gif" src="assets/sparkle-loop.gif" alt="A tiny pink star twinkling beside a heart" width="104" height="54">
         <div class="buttons"><a class="pill primary" href="#work"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#sakura"></use></svg> Explore my creations</a><a class="pill" href="#contact"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#letter"></use></svg> Say hello</a></div>
       </div>
       <div class="studio-card">
@@ -66,22 +67,33 @@
         <button class="pill" data-select="camera" aria-pressed="true"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#camera"></use></svg> Photobooth</button><button class="pill" data-select="story" aria-pressed="false"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#book"></use></svg> Story</button><button class="pill" data-select="game" aria-pressed="false"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#game"></use></svg> Game</button><button class="pill" data-select="bot" aria-pressed="false"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#bunny"></use></svg> Discord app</button><button class="pill" data-select="design" aria-pressed="false"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#sakura"></use></svg> Design</button>
       </div>
       <div id="projects" class="project-stack">
-        <article id="camera" class="project"><div class="stamp strawberry" aria-hidden="true">◎</div><div><p class="label">01 · WEB EXPERIENCE</p><h3>Cotton Candy Photobooth</h3><p>A candy colored camera playground with stickers, effects, and frames.</p><a class="pill primary" href="https://sereiatalia.github.io/Y2k_Cotton_Candy_Photobooth/">Open Photobooth ↗</a></div></article>
-        <article id="story" class="project"><div class="stamp lavender" aria-hidden="true">☾</div><div><p class="label">02 · INTERACTIVE STORY</p><h3>When Tomorrow Remembers</h3><p>An interactive project that brings code and storytelling together.</p><a class="pill primary" href="https://github.com/sereiatalia/When-Tomorrow-Remembers">Open story project ↗</a></div></article>
-        <article id="game" class="project"><div class="stamp mint" aria-hidden="true">♧</div><div><p class="label">03 · GAME PROJECT</p><h3>Feast and Feral</h3><p>I worked on UI/UX, systems planning, marketing, and team leadership.</p><a class="pill primary" href="https://gcls-sti.itch.io/feast-and-feral">Play on itch.io ↗</a></div></article>
-        <article id="bot" class="project"><div class="stamp lavender" aria-hidden="true">♡</div><div><p class="label">04 · DISCORD APP</p><h3>Yachiyo</h3><p>A Discord assistant with useful tools and a little personality.</p><a class="pill primary" href="https://github.com/sereiatalia/Yachiyo">View Yachiyo ↗</a></div></article>
-        <article id="design" class="project"><div class="stamp peach" aria-hidden="true">✿</div><div><p class="label">05 · VISUAL WORK</p><h3>Graphic Design Portfolio</h3><p>Publication graphics, social content, and commissioned work.</p><a class="pill primary" href="https://drive.google.com/drive/folders/1R5RAHmQoQi0tHN-jHKx_zUl-yCqyxFXn?usp=sharing">Browse the gallery ↗</a></div></article>
+        <article id="camera" class="project"><div class="stamp strawberry" aria-hidden="true"><svg viewBox="0 0 240 180"><use href="assets/projects.svg#camera"></use></svg></div><div><p class="label">01 · WEB EXPERIENCE</p><h3>Cotton Candy Photobooth</h3><p>A candy colored camera playground with stickers, effects, and frames.</p><a class="pill primary" href="https://sereiatalia.github.io/Y2k_Cotton_Candy_Photobooth/">Open Photobooth ↗</a></div></article>
+        <article id="story" class="project"><div class="stamp lavender" aria-hidden="true"><svg viewBox="0 0 240 180"><use href="assets/projects.svg#story"></use></svg></div><div><p class="label">02 · INTERACTIVE STORY</p><h3>When Tomorrow Remembers</h3><p>An interactive project that brings code and storytelling together.</p><a class="pill primary" href="https://github.com/sereiatalia/When-Tomorrow-Remembers">Open story project ↗</a></div></article>
+        <article id="game" class="project"><div class="stamp mint" aria-hidden="true"><svg viewBox="0 0 240 180"><use href="assets/projects.svg#game"></use></svg></div><div><p class="label">03 · GAME PROJECT</p><h3>Feast and Feral</h3><p>I worked on UI/UX, systems planning, marketing, and team leadership.</p><a class="pill primary" href="https://gcls-sti.itch.io/feast-and-feral">Play on itch.io ↗</a></div></article>
+        <article id="bot" class="project"><div class="stamp lavender" aria-hidden="true"><svg viewBox="0 0 240 180"><use href="assets/projects.svg#bot"></use></svg></div><div><p class="label">04 · DISCORD APP</p><h3>Yachiyo</h3><p>A Discord assistant with useful tools and a little personality.</p><a class="pill primary" href="https://github.com/sereiatalia/Yachiyo">View Yachiyo ↗</a></div></article>
+        <article id="design" class="project"><div class="stamp peach" aria-hidden="true"><svg viewBox="0 0 240 180"><use href="assets/projects.svg#design"></use></svg></div><div><p class="label">05 · VISUAL WORK</p><h3>Graphic Design Portfolio</h3><p>Publication graphics, social content, and commissioned work.</p><a class="pill primary" href="https://drive.google.com/drive/folders/1R5RAHmQoQi0tHN-jHKx_zUl-yCqyxFXn?usp=sharing">Browse the gallery ↗</a></div></article>
       </div>
     </section>
     <section id="skills" class="room" aria-labelledby="skills-title">
       <p class="label">03 · THE SUPPLY DRAWERS</p><h2 id="skills-title">My creative toolkit</h2>
-      <p class="intro">Open a drawer to see what I work with.</p>
+      <p class="intro">Open a drawer to see what I work with. Tap a little tag to pin it to my desk.</p>
       <div class="drawers">
-        <details><summary>⌘ &nbsp; Web development</summary><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>Discord apps</li></ul></details>
-        <details><summary>♧ &nbsp; Game development</summary><ul class="tags"><li>C#</li><li>Python</li><li>Roblox development</li><li>Systems planning</li></ul></details>
-        <details><summary>✿ &nbsp; Design and media</summary><ul class="tags"><li>UI/UX</li><li>Graphic design</li><li>Photography</li><li>Social content</li></ul></details>
-        <details><summary>✧ &nbsp; Other skills and tools</summary><ul class="tags"><li>Java fundamentals</li><li>Microsoft Office</li><li>SAP S/4HANA fundamentals</li><li>Project coordination</li></ul></details>
+        <details><summary>⌘ &nbsp; Programming and web</summary><ul class="tags"><li>C# · basic</li><li>Java · basic</li><li>Python · basic</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>Discord apps</li><li>Roblox games</li></ul></details>
+        <details><summary>▤ &nbsp; Data and systems</summary><ul class="tags"><li>SQL</li><li>Firebase</li><li>System Analyst</li><li>Data Technician</li><li>SAP S/4HANA · fundamentals</li><li>AWS · basic</li></ul></details>
+        <details><summary>✿ &nbsp; Design and media</summary><ul class="tags"><li>UI/UX</li><li>Graphic design</li><li>Photography</li><li>Canva</li><li>Social Media Manager</li><li>Social content</li></ul></details>
+        <details><summary>✧ &nbsp; People and projects</summary><ul class="tags"><li>Project Leader</li><li>Documentation Specialist</li><li>Leadership</li><li>Communication</li><li>Teamwork</li><li>Time management</li><li>Problem-solving</li><li>Adaptability</li></ul></details>
       </div>
+      <div class="pinboard"><span class="label">MY LITTLE PINBOARD</span><div id="skillPins" aria-live="polite"><span>Tap a skill above to pin it here ♡</span></div></div>
+      <div class="app-shelf"><p class="label">APPS & PLACES I USE</p><div class="app-grid">
+        <button type="button" data-app="My code editor" data-icon="⌘">VS Code</button>
+        <button type="button" data-app="Version control for my projects" data-icon="⑂">Git</button>
+        <button type="button" data-app="Where I publish and share code" data-icon="⌂">GitHub</button>
+        <button type="button" data-app="For graphics and creative layouts" data-icon="✿">Canva</button>
+        <button type="button" data-app="For app data and services" data-icon="✧">Firebase</button>
+        <button type="button" data-app="For documents and presentations" data-icon="▤">Microsoft Office</button>
+        <button type="button" data-app="Enterprise software fundamentals" data-icon="◇">SAP S/4HANA</button>
+        <button type="button" data-app="Cloud basics" data-icon="☁">AWS</button>
+      </div><p id="appDescription" class="app-description" aria-live="polite">Pick an app to see how it fits into my work ✿</p></div>
     </section>
     <section id="journey" class="room" aria-labelledby="journey-title">
       <p class="label">04 · THE MEMORY BOOK</p><h2 id="journey-title">My journey</h2>
@@ -105,7 +117,7 @@
         <div class="website-buttons">
           <p class="label">FIND ME AROUND THE WEB</p>
           <div class="buttons">
-            <a class="pill" href="https://github.com/sereiatalia"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#bunny"></use></svg> GitHub</a><a class="pill" href="https://sereiatalia.itch.io/"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#game"></use></svg> itch.io</a><a class="pill" href="https://sereiatalia.github.io/Y2k_Cotton_Candy_Photobooth/"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#camera"></use></svg> Photobooth</a><a class="pill" href="https://gcls-sti.itch.io/feast-and-feral"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#wand"></use></svg> Feast and Feral</a><a class="pill" href="https://github.com/sereiatalia/When-Tomorrow-Remembers"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#book"></use></svg> When Tomorrow Remembers</a><a class="pill" href="https://drive.google.com/drive/folders/1R5RAHmQoQi0tHN-jHKx_zUl-yCqyxFXn?usp=sharing"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#sakura"></use></svg> Design gallery</a><button id="copyEmail" class="pill" type="button"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#letter"></use></svg> Copy email</button>
+            <a class="pill" href="https://github.com/sereiatalia"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#bunny"></use></svg> GitHub</a><a class="pill" href="https://sereiatalia.itch.io/"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#game"></use></svg> itch.io</a><button id="copyEmail" class="pill" type="button"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#letter"></use></svg> Email</button><a class="pill" href="https://www.facebook.com/kanenoriii/"><svg class="icon" aria-hidden="true" viewBox="0 0 32 32"><use href="assets/stickers.svg#heart"></use></svg> Facebook</a>
           </div><p id="emailStatus" role="status" hidden></p>
         </div>
       </div>
