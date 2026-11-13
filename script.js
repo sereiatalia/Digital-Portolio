@@ -112,6 +112,18 @@ document.getElementById('copyDiscord').addEventListener('click', async () => {
   }
 });
 
+document.getElementById('copyEmail').addEventListener('click', async () => {
+  const email = 'alysajuliengvr@gmail.com';
+  const status = document.getElementById('emailStatus');
+  status.hidden = false;
+  try {
+    await navigator.clipboard.writeText(email);
+    status.textContent = 'Copied: ' + email + ' ♡';
+  } catch {
+    status.textContent = 'Select and copy: ' + email;
+  }
+});
+
 try {
   const key = 'alysa-studio-visits';
   const sessionKey = 'alysa-studio-session';
