@@ -38,9 +38,9 @@ p{margin:.5em 0 1em}
 .studio-card{display:grid;justify-items:center;text-align:center;background:#fff4f8;border:1px dashed var(--line);border-radius:18px;padding:8px 12px 16px}
 .studio-card img{display:block;width:100%;height:auto}
 .studio-card picture{display:block;width:100%}
-.welcome-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:17px;padding:8px;border:1px solid #e9bad0;border-radius:18px;background:linear-gradient(125deg,#fff6fb,#f9e6f2,#faf0ff);box-shadow:0 4px 0 #efd3df;max-width:max-content}
+.welcome-actions{display:grid;grid-template-columns:72px minmax(0,1fr);align-items:center;gap:10px;margin-top:17px;padding:8px;border:1px solid #e9bad0;border-radius:18px;background:linear-gradient(125deg,#fff6fb,#f9e6f2,#faf0ff);box-shadow:0 4px 0 #efd3df;width:min(100%,570px)}
 .welcome-actions .sparkle-gif{margin:0;flex:none;border:1px solid #ebc8d8;border-radius:12px}
-.welcome-actions .buttons{gap:8px}
+.welcome-actions .buttons{gap:8px;justify-content:flex-start;min-width:0}
 .welcome-actions .pill{box-shadow:0 2px 0 #e0b2c8}
 .welcome-actions .pill:hover{transform:translateY(-2px)}
 .rooms a[aria-current] .icon{animation:icon-wiggle .7s ease-out}
@@ -87,7 +87,7 @@ summary small{color:var(--soft);font-weight:600;flex-shrink:0}
 .stamp svg{display:block;width:100%;height:100%}
 .project:hover .stamp{transform:rotate(-2deg) scale(1.025);box-shadow:0 8px 18px #94557529}
 .project[hidden]{display:none}
-.sparkle-gif{display:block;width:104px;height:54px;object-fit:contain;mix-blend-mode:multiply;margin:.1rem 0 .6rem}
+.sparkle-gif{display:block;width:72px;height:38px;object-fit:contain;mix-blend-mode:multiply}
 .palette-toggle{width:40px;height:40px;border:1px solid #d9a0bb;border-radius:50%;background:#fff8fc;font-size:1.1rem;color:var(--berry);box-shadow:0 2px 0 #e9c7d7}
 .palette-toggle:hover{transform:rotate(20deg)}
 .pinboard,.app-shelf{margin-top:23px;padding:15px 18px;background:#fff5fa;border:1px dashed #d5a3ba;border-radius:14px}
@@ -120,5 +120,5 @@ body[data-palette=lavender] .rooms:after{background:radial-gradient(circle at 8p
 #copyStatus{font-size:.85rem}
 footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;background:#fae4ef;border-top:1px dashed var(--line);padding:.75rem clamp(14px,4vw,30px);font-size:.76rem;color:var(--soft)}
 #visitCount{font-variant-numeric:tabular-nums;letter-spacing:.12em;border-radius:4px;background:#fff8fc;padding:.15em .35em}
-@media(max-width:660px){.home,.album{grid-template-columns:1fr}.studio-card{width:min(100%,390px);justify-self:center}.rooms{grid-template-columns:repeat(3,minmax(0,1fr))}.project{grid-template-columns:1fr}.stamp{width:min(100%,175px)}.app-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.welcome-actions{justify-content:center}.welcome-actions .buttons{justify-content:center}}
+@media(max-width:660px){.home,.album{grid-template-columns:1fr}.studio-card{width:min(100%,390px);justify-self:center}.rooms{grid-template-columns:repeat(3,minmax(0,1fr))}.project{grid-template-columns:1fr}.stamp{width:min(100%,175px)}.app-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(prefers-reduced-motion:reduce){.room.enter,.desk-twinkle,.desk-note,details[open]>p,details[open]>.tags,.heart-float,.background-sparkles span,.rooms a[aria-current] .icon,.project:not([hidden]){animation:none}.heart-float,.sparkle-gif,.background-sparkles{display:none}.rooms .icon,.pill .icon,.stamp{transition:none}}
